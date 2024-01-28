@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:ci": "ng build --prod --sourceMap=false --base-href https://jifrivly.github.io/",
+    "build:ci": "ng build -c=production --base-href https://jifrivly.github.io/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:jifri-profile": "node dist/jifri-profile/server/server.mjs",
