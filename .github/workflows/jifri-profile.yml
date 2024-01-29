@@ -39,9 +39,7 @@ jobs:
         with:
           name: deploy_dist
       - name: Display structure of downloaded files
-        run: |
-          ls -R
-          echo ${{ secrets.ACCESS_TOKEN }}
+        run: ls -R
       - name: Deploy to GitHub Pages 🍹
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
