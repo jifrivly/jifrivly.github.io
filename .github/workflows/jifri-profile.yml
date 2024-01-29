@@ -39,9 +39,12 @@ jobs:
         with:
           name: deploy_dist
       - name: Display structure of downloaded files
-        run: ls -R
+        run: |
+          ls -R
+          echo ${{ secrets }}
       - name: Deploy to GitHub Pages 🍹
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
-          BRANCH: gh-pages
-          FOLDER: jifri-profile/browser
+          token: ${{ secrets.ACCESS_TOKEN }}
+          branch: gh-pages
+          folder: jifri-profile/browser
