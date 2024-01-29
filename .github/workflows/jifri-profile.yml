@@ -38,10 +38,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Display structure of files before checkout
-        run: ls -lahrt
-      - name: Display dist folder before checkout
-        run: ls -R dist
       - name: Checkout 🛎️
         uses: actions/checkout@v4
       - name: Display structure of files after checkout
